@@ -51,12 +51,12 @@ public class PlayerRepositoryDB implements IPlayerRepository {
 
     @Override
     public int getAllCount() {
-        int getAllCount;
+        int totalCount;
         try (Session session = sessionFactory.openSession()) {
-            Query<Player> getAllCountQuery = session.createNamedQuery("Get_All_Count", Player.class);
-            getAllCount = getAllCountQuery.list().size();
+            Query<Long> query = session.createNamedQuery("Get_All_Count", Long.class);
+            totalCount = Math.toIntExact(query.uniqueResult());
         }
-        return getAllCount;
+        return totalCount;
     }
 
     @Override

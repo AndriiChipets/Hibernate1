@@ -9,7 +9,8 @@ import java.util.Date;
 @Entity
 @Table(name = "player", schema = "rpg")
 @org.hibernate.annotations.NamedQuery(name = "Get_All_Count",
-        query = "from Player")
+        query = "select count(p) from Player p")
+
 public class Player implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
