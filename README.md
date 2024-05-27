@@ -10,3 +10,5 @@ RPG admin panel application where I replaced data collected in the List inside t
 - Lombok
 - Tomcat Server
 - Thymeleaf
+
+![image](https://github.com/AndriiChipets/Hibernate1/assets/137887124/ab3e9432-754a-4bba-b607-3de7119f9163)
